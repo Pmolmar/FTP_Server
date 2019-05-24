@@ -194,7 +194,7 @@ void ClientConnection::WaitForRequests()
                     int bytes;
 
                     recv(data_socket, buffer, MAX_BUFF, 0);
-                    file.write(buffer,MAX_BUFF);
+                    file << buffer;
                     bytes=file.gcount();
 
                     if (bytes != MAX_BUFF)
